@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate in Computer Programming</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .course-banner {
+            background-image: url('image/course\ banner.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 55vh;
+            padding-top: 30px;
+        }
+
+        .course-banner-content {
+            color: white;
+            position: relative;
+        }
+
+        .course-banner-content h1 {
+            position: absolute;
+            top: 50px;
+            left: 100px;
+            font-size: 50px;
+        }
+
+        .course-banner-content p {
+            position: absolute;
+            top: 150px;
+            left: 100px;
+            font-size: 20px;
+        }
+
+        .course-banner-content p a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .course-banner-content p a:hover {
+            color: #0DBA4B;
+        }
+
+        .course-banner-content p span {
+            padding: 0 20px;
+        }
+
+        .course-container {
+            width: 90%;
+            margin: auto;
+        }
+
+        .course-details {
+            display: flex;
+        }
+
+        .course-details-col1 {
+            width: 50%;
+        }
+
+        .course-details-col1 img {
+            width: 600px;
+        }
+
+        .course-details-col2 {
+            width: 50%;
+            margin-top: 70px;
+            padding-left: 20px;
+        }
+
+        .course-details-col2-heading h4 {
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 0;
+            line-height: 1.5em;
+            padding-bottom: 15px;
+            position: relative;
+        }
+
+        .course-details-col2-heading h4:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 5px;
+            width: 55px;
+            background-color: #0DBA4B;
+        }
+
+        .course-details-col2-heading h4:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 2px;
+            height: 1px;
+            width: 95%;
+            max-width: 255px;
+            background-color: #0DBA4B;
+        }
+
+        .course-details-col2-details-bx i {
+            color: #0DBA4B;
+            font-size: 60px;
+        }
+
+        .course-details-col2-details-bx {
+            display: flex;
+            margin: 50px 20px 0px;
+        }
+
+        .course-icon {
+            width: 11%;
+        }
+
+        .course-icon-detail {
+            width: 85%;
+            box-shadow: -4px -4px 13px 0px rgb(207 227 211);
+            margin-left: 10px;
+        }
+
+        .course-icon-detail h3 {
+            padding-top: 17px;
+            padding-left: 10px;
+            margin-left: 10px;
+        }
+
+        .course-details-col2-details-bx h3 span {
+            font-weight: bold;
+            font-size: 20px;
+            color: #0DBA4B;
+        }
+
+        .course-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 25px;
+        }
+
+
+
+        .course-buttons a {
+            text-decoration: none;
+        }
+
+
+
+        .button-animation {
+            position: relative;
+            display: inline-block;
+            padding: 20px 30px;
+            color: #0DBA4B;
+            text-transform: uppercase;
+            overflow: hidden;
+            letter-spacing: 4px;
+            transition: 0.5s;
+            margin: 0px 20px;
+        }
+
+        .button-animation span {
+            position: absolute;
+            display: block;
+        }
+
+        .button-animation span:nth-child(1) {
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #0DBA4B);
+            animation: btn-anim1 1s linear infinite;
+        }
+
+        @keyframes btn-anim1 {
+            0% {
+                left: -100%;
+            }
+
+            50%,
+            100% {
+                left: 100%;
+            }
+        }
+
+        .button-animation span:nth-child(2) {
+            top: -100%;
+            right: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(180deg, transparent, #0DBA4B);
+            animation: btn-anim2 1s linear infinite;
+            animation-delay: 0.25s;
+        }
+
+        @keyframes btn-anim2 {
+            0% {
+                top: -100%;
+            }
+
+            50%,
+            100% {
+                top: 100%;
+            }
+        }
+
+        .button-animation span:nth-child(3) {
+            bottom: 0;
+            right: -100%;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(270deg, transparent, #0DBA4B);
+            animation: btn-anim3 1s linear infinite;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes btn-anim3 {
+            0% {
+                right: -100%;
+            }
+
+            50%,
+            100% {
+                right: 100%;
+            }
+        }
+
+        .button-animation span:nth-child(4) {
+            bottom: -100%;
+            left: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(360deg, transparent, #0DBA4B);
+            animation: btn-anim4 1s linear infinite;
+            animation-delay: 0.75s;
+        }
+
+        @keyframes btn-anim4 {
+            0% {
+                bottom: -100%;
+            }
+
+            50%,
+            100% {
+                bottom: 100%;
+            }
+        }
+
+        .button-animation:hover {
+            background-color: #0DBA4B;
+            color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 2px #0DBA4B, 0 0 4px #0DBA4B, 0 0 6px #0DBA4B,
+                0 0 8px #0DBA4B;
+        }
+
+        /* whatsapp icon */
+        .bottom-whatsapp {
+            position: fixed;
+            bottom: 80px;
+            right: 30px;
+        }
+
+        .bottom-whatsapp a i {
+            font-size: 50px;
+            color: #55b743;
+            box-shadow: 6px 1px 3px 0px #ddd9d9;
+            padding: 10px;
+            border-radius: 50%;
+        }
+
+
+
+        /* course-process */
+        .course-process {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-top: 30px;
+        }
+
+        .course-process-details {
+            width: 25%;
+            text-align: center;
+        }
+
+        .course-process-details i {
+            background-color: #0DBA4B;
+            padding: 20px;
+        }
+
+        .form {
+            text-align: center;
+            font-size: 30px;
+            margin-top: 60px;
+        }
+
+        .form-h2 {
+            text-align: center;
+            font-size: 40px;
+            padding: 50px 0px;
+        }
+
+        input[type=text],
+        select {
+            width: 70%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .form-button {
+            background-color: #0DBA4B;
+            border: none;
+            color: white;
+            padding: 20px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        .course-process-details .box{
+            margin-bottom: 20px;
+        }
+        @media (min-width:320px) {
+            .course-container{
+                width: 90%;
+                margin: auto;
+            }
+            .course-details{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .course-details-col1{
+                width: 100%;
+            }
+            .course-banner-content h1{
+                font-size: 20px;
+                left: 10px;
+                top: 70px;
+            }
+            .course-banner-content p{
+                font-size: 15px;
+                left: 10px;
+                top: 100px;
+            }
+            .course-details-col1 img{
+                width: 100%;
+            }
+            .course-details-col2{
+                width: 100%;
+            }
+            
+            .course-details-col2-details-bx{
+                width: 100%;
+                margin: auto;
+                padding-top: 20px;
+            }
+            .course-icon{
+                width: 20%;
+                
+            }
+            .course-icon-detail{
+                width: 80%;
+            }
+            .course-buttons{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .course-process{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .course-process-details{
+                width: 50%;
+                margin: auto;
+                padding-top: 10px;
+            }
+        }
+        @media (min-width:768px) {
+            .course-container{
+                width: 90%;
+                margin: auto;
+            }
+            .course-details{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .course-details-col1{
+                width: 100%;
+            }
+            .course-banner-content h1{
+                font-size: 30px;
+                left: 30px;
+                top: 70px;
+            }
+            .course-banner-content p{
+                font-size: 20px;
+                left: 30px;
+                top: 110px;
+            }
+            .course-details-col1 img{
+                width: 100%;
+            }
+            .course-details-col2{
+                width: 100%;
+            }
+            
+            .course-details-col2-details-bx{
+                width: 100%;
+                margin: auto;
+                padding-top: 20px;
+            }
+            .course-icon{
+                width: 20%;
+                
+            }
+            .course-icon-detail{
+                width: 80%;
+            }
+            .course-buttons{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .course-process{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .course-process-details{
+                width: 50%;
+                margin: auto;
+                padding-top: 10px;
+            }
+        }
+        @media (min-width:1020px) {
+            .course-container{
+                width: 90%;
+                margin: auto;
+            }
+            .course-details{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .course-details-col1{
+                width: 50%;
+            }
+            .course-details-col1 img{
+                width: 80%;
+            }
+            .course-banner-content h1{
+                font-size: 30px;
+                left: 40px;
+                top: 70px;
+            }
+            .course-banner-content p{
+                font-size: 20px;
+                left: 40px;
+                top: 110px;
+            }
+            .course-details-col2{
+                width: 50%;
+            }
+            .course-process{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .course-process-details{
+                width: 10%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="fullstack-course">
+        <!-- course banner  -->
+        <div class="row">
+            <div class="course-banner">
+                <div class="course-banner-content">
+                    <h1> Computer Programming</h1>
+                    <p><a href="index.html#courses">Course</a><span>|</span>Certificate in Computer Programming</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="course-container">
+                <div class="course-details">
+                    <div class="course-details-col1">
+                        <img src="image/comp progrm.png" alt="">
+                    </div>
+                    <div class="course-details-col2">
+                        <div class="course-details-col2-heading">
+                            <h4>CERTIFICATE IN COMPUTER PROGRAMMING</h4>
+                        </div>
+                        <div class="course-details-col2-details">
+                            <div class="course-details-col2-details-bx">
+                                <div class="course-icon">
+                                    <i class='bx bx-hourglass' style="padding-right: 12px;"></i>
+                                </div>
+                                <div class="course-icon-detail">
+                                    <h3>Duration : <span>1 or 2 or 3 or 6 Months</span></h3>
+                                </div>
+                            </div>
+                            <div class="course-details-col2-details-bx">
+                                <div class="course-icon">
+                                    <i class='bx bxs-graduation' style="padding-right: 8px;"></i>
+                                </div>
+                                <div class="course-icon-detail">
+                                    <h3>Eligible : <span>Not Applicable</span></h3>
+                                </div>
+                            </div>
+                            <div class="course-details-col2-details-bx">
+                                <div class="course-icon">
+                                    <i class='bx bx-time-five'></i>
+                                </div>
+                                <div class="course-icon-detail">
+                                    <h3>Timing : <span>1hr Theory and 1hr Practical class</span></h3>
+                                </div>
+                            </div>
+                            <div class="course-buttons">
+                                <a class="box__link button-animation" href="#form">
+                                    online class
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </a>
+                                <a class="box__link button-animation" href="#form">
+                                    offline class
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- whatsapp icon -->
+                    <div class="bottom-whatsapp">
+                        <a href="https://wa.me/8438558527" target="_blank" rel="noopener noreferrer">
+                            <i class='bx bxl-whatsapp'></i>
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- course-animation-straightline -->
+                <div class="course-process">
+                    <div class="course-process-details">
+                        <div class="box">
+                            <i class='bx bx-cloud' style="color: white; font-size: 30px;"></i>
+                        </div>
+                        <div class="bottomline-heading">
+                            <h3>Programming Language C</h3>
+                        </div>
+                    </div>
+                    <div class="course-process-details">
+                        <div class="box">
+                            <i class='bx bx-terminal' style="color: white; font-size: 30px;"></i>
+                        </div>
+                        <div class="bottomline-heading">
+                            <h3>Programming Language C++</h3>
+                        </div>
+                    </div>
+                    <div class="course-process-details">
+                        <div class="box">
+                            <i class='bx bx-receipt' style="color: white; font-size: 30px;"></i>
+                        </div>
+                        <div class="bottomline-heading">
+                            <h3>Programming Language VB</h3>
+                        </div>
+                    </div>
+                    <div class="course-process-details">
+                        <div class="box">
+                            <i class='bx bx-laptop' style="color: white; font-size: 30px;"></i>
+                        </div>
+                        <div class="bottomline-heading">
+                            <h3>Oracle-SQL</h3>
+                        </div>
+                    </div>
+                    <div class="course-process-details">
+                        <div class="box">
+                            <i class='bx bx-laptop' style="color: white; font-size: 30px;"></i>
+                        </div>
+                        <div class="bottomline-heading">
+                            <h3>JAVA programming</h3>
+                        </div>
+                    </div>
+                    <div class="course-process-details">
+                        <div class="box">
+                            <i class='bx bx-laptop' style="color: white; font-size: 30px;"></i>
+                        </div>
+                        <div class="bottomline-heading">
+                            <h3>JavaScript</h3>
+                        </div>
+                    </div>
+                    <div class="course-process-details">
+                        <div class="box">
+                            <i class='bx bx-laptop' style="color: white; font-size: 30px;"></i>
+                        </div>
+                        <div class="bottomline-heading">
+                            <h3>Computer Lab Practical</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <form class="form" id="form">
+            <h2 class="form-h2">Get A Consult</h2>
+
+            <input type="text" id="name" name="name" placeholder="Your Name"><br>
+
+            <input type="text" id="email" name="email" placeholder="Your Email"><br>
+
+            <input type="text" id="phone" name="phone" placeholder="Your Phone"><br>
+
+            <select name="iquiry" id="iquiry">
+                <option value=" your iquiry about">-- Select Your Course --</option>
+                <option value="general information request">Certificate in Basic Computer (CBS)</option>
+                <option value="partner relation">Certificate in Computer Fundamentais For Kids(CCFK)</option>
+                <option value="partner licensing">Certificate in Computer Financial Accounting (CCFA-Tally)</option>
+                <option value="partner licensing">Certificate in Computer Programming(CCP)</option>
+                <option value="partner licensing">Certificate in DeskTop Publishing(CDTP)</option>
+                <option value="partner licensing">Certificate in Web Designing(CWD)</option>
+                <option value="partner licensing">Certificate in Computer Skills(CCS)</option>
+                <option value="partner licensing">Diploma in Computer Application(DCS)</option>
+                <option value="partner licensing">Diploma in Web Design(DWD)</option>
+                <option value="partner licensing">Diploma in Desktop Publishing(DDTP)</option>
+                <option value="partner licensing">Advance Certificate in Computer Skills(ACCS)</option>
+                <option value="partner licensing">Advance Diploma in Computer Application(ADCA) </option>
+                <option value="partner licensing">Advance Diploma in Computer Skills(ADCS)</option>
+                <option value="partner licensing">Advance Diploma in Computer Financial Accounting(ADCFA)</option>
+                <option value="partner licensing">Diploma in Computer Office Skills & Accounting(DCOSA)</option>
+                <option value="partner licensing">Diploma in Computer Office Management & Publishing(DCOMP)</option>
+                <option value="partner licensing">Advance Diploma in Computer Programming Skills(ADCPS)</option>
+                <option value="partner licensing">Honours diploma in Computer Skills(HDCS)</option>
+                <option value="partner licensing">PG Diploma in Computer Skills(PGDCS)</option>
+            </select><br>
+
+            <input type="text" id="message" name="message" placeholder="Message"><br>
+
+            <button type="button" class="form-button">Send Message</button>
+
+        </form>
+    </section>
+
+
+</body>
+
+</html>
